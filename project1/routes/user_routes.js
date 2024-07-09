@@ -3,7 +3,7 @@ const router = Router();
 const controller = require("../controller/user_controller");
 
 
-router.get("/table", controller.c_table);
+
 router.get('/', controller.getUser);
 router.get('/:id', controller.getUserById);
 router.post('/' , controller.addUser);

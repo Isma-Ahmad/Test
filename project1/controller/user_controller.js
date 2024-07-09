@@ -1,6 +1,5 @@
 
 const service = require("../services/user_service.js");
-const table = require("../table.js");
 
 function addUser(req, res) {
   const { id, first_name, last_name, email } = req.body;
@@ -68,10 +67,6 @@ function deleteUser(req, res) {
   res.send("data deleted successfully..!!");
 }
 
-function c_table(req, res) {
-  const Table = table.createTable();
-  res.send("create table successfully").json(Table);
-}
 
 module.exports = {
     addUser,
@@ -79,6 +74,5 @@ module.exports = {
     getUserById,
     updateUser,
     deleteUser,
-    c_table,
 
 };
